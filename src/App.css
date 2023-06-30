@@ -29,3 +29,9 @@
 .scroll_bar {
   margin: 4em 0 0px 2em;
 }
+.btn_div {
+  margin-left: 150px;
+  align-items: center;
+  justify-content: center;
+  /* display: flex; */
+}
