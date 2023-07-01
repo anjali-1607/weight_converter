@@ -17,45 +17,94 @@ import "./App.css";
 // ];
 
 export default function Button() {
-  function Hello() {
-    console.log("1sthello");
-  }
+  const from = (value) => {
+    console.log({ fromUnit: value });
+  };
+
   return (
     <>
       <div className="scroll_bar">
         <p className="first_p">
-          <button>Kilogram (kg)</button>
-          <button>Gram (g)</button>
-          <button>Pound (lb)</button>
-          <button>ouce (oz)</button>
-          <button>tonne (ton)</button>
-          <button>ton (ton)</button>
-          <button>carat (ct)</button>
-          <button>stone (st)</button>
-          <button>catty (China)</button> <br></br>
-          <button>mace</button>
+          <button value={"kilogram"} onClick={from}>
+            Kilogram (kg)
+          </button>
+          <button value={"gram"} onClick={from}>
+            Gram (g)
+          </button>
+          <button value={"pound"} onClick={from}>
+            Pound (lb)
+          </button>
+          <button value={"ouce"} onClick={from}>
+            ouce (oz)
+          </button>
+          <button value={"tonne"} onClick={from}>
+            tonne (ton)
+          </button>
+          <button value={"ton"} onClick={from}>
+            {" "}
+            ton (ton)
+          </button>
+          <button value={"carat"} onClick={from}>
+            carat (ct)
+          </button>
+          <button value={"stone"} onClick={from}>
+            stone (st)
+          </button>
+          <button value={"catty"} onClick={from}>
+            catty (China)
+          </button>{" "}
           <br></br>
-          <button>tael (China)</button>
+          <button value={"mace"} onClick={from}>
+            mace
+          </button>
           <br></br>
-          <button>dan (Japan) </button>
+          <button value={"tael"} onClick={from}>
+            tael (China)
+          </button>
           <br></br>
-          <button>artel (Arab) </button>
+          <button value={"dan"} onClick={from}>
+            dan (Japan){" "}
+          </button>
           <br></br>
-          <button>bale (UK)</button>
-          <button>deneir(France)</button>
+          <button value={"artel"} onClick={from}>
+            artel (Arab){" "}
+          </button>
           <br></br>
-          <button>centner</button>
-          <button>gran</button>
-          <button>lot (Germany)</button>
-          <button>danoro</button>
+          <button value={"bale"} onClick={from}>
+            bale (UK)
+          </button>
+          <button value={"deneir"} onClick={from}>
+            deneir(France)
+          </button>
           <br></br>
-          <button>etto</button>
+          <button value={"centner"} onClick={from}>
+            centner
+          </button>
+          <button value={"gran"} onClick={from}>
+            gran
+          </button>
+          <button value={"lot"} onClick={from}>
+            lot (Germany)
+          </button>
+          <button value={"danoro"} onClick={from}>
+            danoro
+          </button>
           <br></br>
-          <button>grano</button>
+          <button value={"etto"} onClick={from}>
+            etto
+          </button>
           <br></br>
-          <button>Arroba</button>
+          <button value={"grano"} onClick={from}>
+            grano
+          </button>
           <br></br>
-          <button>funt</button>
+          <button value={"arroba"} onClick={from}>
+            Arroba
+          </button>
+          <br></br>
+          <button value={"funt"} onClick={from}>
+            funt
+          </button>
         </p>
         <p className="second_p">
           <button>Gram (g)</button>

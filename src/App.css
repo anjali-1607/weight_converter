@@ -61,4 +61,12 @@ button {
   color: antiquewhite;
   padding: 1px 8px 1px 8px;
   font-size: 17px;
+  cursor: pointer;
+}
+.convert_btn {
+  padding: 0 3em 0 3em;
+  margin: 1em 0 2em 0;
+  background-color: antiquewhite;
+  border-radius: 8px;
+  color: black;
 }

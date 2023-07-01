@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import Button from "./Button";
 
 export default function App() {
+  const [data, setData] = useState("");
+  const textt = (num) => {
+    setData({ ...data, fromValue: num.target.value });
+    console.log(num.target.value);
+    console.log(data);
+  };
+
+  const convert = () => {};
+
   return (
     <>
       <div className="container">
@@ -37,20 +46,13 @@ export default function App() {
           <div className="input_div">
             <input className="input_1" />
 
-            <input className="input_2" />
+            <input className="input_2" onChange={textt} />
           </div>
+          <from />
           <Button />
 
           <div className="btn_div">
-            <button
-              className="convert_btn"
-              style={{
-                padding: "0 3em 0 3em",
-                margin: "1em 0 2em 0",
-                backgroundColor: "antiquewhite",
-                borderRadius: "8px",
-                color: "black",
-              }}>
+            <button className="convert_btn" onClick={convert}>
               <h3>Convert</h3>
             </button>
           </div>
