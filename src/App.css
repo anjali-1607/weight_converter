@@ -70,3 +70,6 @@ button {
   border-radius: 8px;
   color: black;
 }
+.btn_active {
+  border: 2px solid white;
+}

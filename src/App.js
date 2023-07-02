@@ -1,16 +1,45 @@
 import React, { useState } from "react";
 import "./App.css";
 import Button from "./Button";
+import axios from "axios";
 
 export default function App() {
   const [data, setData] = useState("");
+  const [op, setOp] = useState(data);
   const textt = (num) => {
     setData({ ...data, fromValue: num.target.value });
     console.log(num.target.value);
-    console.log(data);
+  };
+  console.log(data);
+
+  const getData = (data1) => {
+    setData({ ...data, ...data1 });
+    console.log(data1);
   };
 
-  const convert = () => {};
+  const convert = async () => {
+    const options = {
+      // method: "GET",
+      // url: "https://unit-measurement-conversion.p.rapidapi.com/convert",
+
+      params: { ...data, type: "weight" },
+
+      headers: {
+        "X-RapidAPI-Key": "44fd12d7e9mshc97fba051aa42bbp1e55c5jsnc2dd769b5228",
+        "X-RapidAPI-Host": "unit-measurement-conversion.p.rapidapi.com",
+      },
+    };
+
+    await axios
+      .get(
+        "https://unit-measurement-conversion.p.rapidapi.com/convert",
+        options
+      )
+      .then((res) => {
+        setOp(res.data.value);
+        console.log(res.data);
+      });
+  };
 
   return (
     <>
@@ -44,12 +73,12 @@ export default function App() {
             </label>
           </div>
           <div className="input_div">
-            <input className="input_1" />
+            <input className="input_1" value={op} />
 
-            <input className="input_2" onChange={textt} />
+            <input required className="input_2" onChange={textt} />
           </div>
           <from />
-          <Button />
+          <Button info={getData} />
 
           <div className="btn_div">
             <button className="convert_btn" onClick={convert}>
