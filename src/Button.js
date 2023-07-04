@@ -366,6 +366,7 @@ export default function Button({ info = () => {} }) {
             }}>
             centner
           </button>
+          <br></br>
           <button
             className={toVal === "gran" ? "btn_active" : ""}
             value={"gran"}
